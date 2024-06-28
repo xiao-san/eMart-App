@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       //Swaper Brands
-
+          
                       VxSwiper.builder(
                         aspectRatio: 16 / 9,
                         autoPlay: true,
@@ -58,9 +58,9 @@ class HomeScreen extends StatelessWidget {
                               .make(),
                         ),
                       ),
-
+          
                       10.heightBox,
-
+          
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: List.generate(
@@ -74,9 +74,9 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-
+          
                       10.heightBox,
-
+          
                       VxSwiper.builder(
                         aspectRatio: 16 / 9,
                         autoPlay: true,
@@ -95,9 +95,9 @@ class HomeScreen extends StatelessWidget {
                               .make(),
                         ),
                       ),
-
+          
                       10.heightBox,
-
+          
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: List.generate(
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-
+          
                       20.heightBox,
                       Align(
                               alignment: Alignment.centerLeft,
@@ -131,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                           .box
                           .padding(const EdgeInsets.only(left: 15))
                           .make(),
-
+          
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
@@ -151,26 +151,24 @@ class HomeScreen extends StatelessWidget {
                           ).toList(),
                         ),
                       ),
-
+          
                       20.heightBox,
-
-
+          
                       // features products
-
+          
                       Container(
                         // height: context.screenHeight/1.5,
                         width: double.infinity,
                         margin: const EdgeInsets.symmetric(horizontal: 10),
                         padding: const EdgeInsets.all(12),
-                        decoration:const BoxDecoration(
-                          color: redColor
+                        decoration: const BoxDecoration(color: redColor
                             // image: DecorationImage(
-
+          
                             //     image: AssetImage(
                             //       imgBackground,
                             //     ),
                             //     fit: BoxFit.fill, )),
-                        ),
+                            ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -187,30 +185,46 @@ class HomeScreen extends StatelessWidget {
                                 children: List.generate(
                                   6,
                                   (index) => Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Image.asset(imgP1,width: 150,fit: BoxFit.cover,),
-                              
+                                      Image.asset(
+                                        imgP1,
+                                        width: 150,
+                                        fit: BoxFit.cover,
+                                      ),
                                       10.heightBox,
-                              
-                                      "Laptop 4GB/64GB".text.fontFamily(semibold).color(darkFontGrey).make(),
-                              
+                                      "Laptop 4GB/64GB"
+                                          .text
+                                          .fontFamily(semibold)
+                                          .color(darkFontGrey)
+                                          .make(),
                                       10.heightBox,
-                              
-                                      "\600".text.color(redColor).fontFamily(bold).size(16).make(),
+                                      "\600"
+                                          .text
+                                          .color(redColor)
+                                          .fontFamily(bold)
+                                          .size(16)
+                                          .make(),
                                     ],
-                                  ).box.white.roundedSM.padding(const EdgeInsets.all(8)).margin(const EdgeInsets.symmetric(horizontal: 4)).make(),
+                                  )
+                                      .box
+                                      .white
+                                      .roundedSM
+                                      .padding(const EdgeInsets.all(8))
+                                      .margin(const EdgeInsets.symmetric(
+                                          horizontal: 4))
+                                      .make(),
                                 ),
                               ),
                             )
                           ],
                         ),
-                        
                       ),
-
+          
                       20.heightBox,
-                        //vsSwiper
-                        VxSwiper.builder(
+                      //vsSwiper
+                      VxSwiper.builder(
                         aspectRatio: 16 / 9,
                         autoPlay: true,
                         height: 150,
@@ -228,7 +242,45 @@ class HomeScreen extends StatelessWidget {
                               .make(),
                         ),
                       ),
-
+          
+                      20.heightBox,
+          
+                      GridView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                         itemCount: 6,
+                        gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                          mainAxisExtent: 300,
+                            crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8 ),
+                        itemBuilder: (context, index) {
+                          return Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        imgP5,
+                                        width: 200,
+                                        height: 200,
+                                        fit: BoxFit.cover,
+                                      ),
+                                      const Spacer(),
+          
+                                      "Laptop 4GB/64GB"
+                                          .text
+                                          .fontFamily(semibold)
+                                          .color(darkFontGrey)
+                                          .make(),
+                                      10.heightBox,
+                                      "\$600"
+                                          .text
+                                          .color(redColor)
+                                          .fontFamily(bold)
+                                          .size(16)
+                                          .make(),
+                                    ],
+                                  ).box.color(whiteColor).margin(const EdgeInsets.symmetric(horizontal: 4)).padding(const EdgeInsets.all(12)).roundedSM.make();
+                        },
+                      ).box.margin(const EdgeInsets.symmetric(horizontal: 8)).make(),
                     ],
                   ),
                 ),
