@@ -249,7 +249,7 @@ class HomeScreen extends StatelessWidget {
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                          itemCount: 6,
-                        gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           mainAxisExtent: 300,
                             crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8 ),
                         itemBuilder: (context, index) {
@@ -265,13 +265,13 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       const Spacer(),
           
-                                      "Laptop 4GB/64GB"
+                                      "Shopping Bag"
                                           .text
                                           .fontFamily(semibold)
                                           .color(darkFontGrey)
                                           .make(),
                                       10.heightBox,
-                                      "\$600"
+                                      "\$90"
                                           .text
                                           .color(redColor)
                                           .fontFamily(bold)

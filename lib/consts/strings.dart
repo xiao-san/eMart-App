@@ -39,3 +39,14 @@ const searchAnything = "Search anything...",
     girlsDress = "Girls Dresses",
     featuredCategories = "Featured Categories",
     featuredProduct =  "Featured Products";
+
+    //Category Strings
+    const womenClothing = "Woman Clothing",
+          meanClothing = "Men Clothing & Fashion",
+          compAccess = "Computer & Accessories",
+          autoMob = "Automobiles",
+          kidToys = " Kids & Toys",
+          sports = "Sports",
+          jewelery = "Jewelery",
+          cellPhone = "Cellphone & Tap",
+          furniture = "Furniture";
